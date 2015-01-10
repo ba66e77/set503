@@ -1,0 +1,25 @@
+<?php
+/**
+ * @file
+ * Other than for testing, this module should never be enabled on a production site.
+ */
+
+/**
+ * Implementation of hook_menu().
+ */
+function set503_menu() {
+  $items = array();
+  $items['splode'] = array(
+    'page callback'    => 'set503_explosion_page',
+    'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+/**
+ * Page callback to return a 503 response.
+ */
+function set503_explosion_page() {
+  drupal_set_header($_SERVER['SERVER_PROTOCOL'] . ' 503 Service Unavailable');
+}

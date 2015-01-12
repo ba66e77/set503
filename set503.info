@@ -1,4 +1,4 @@
 name = Set 503
 description = Set a 503 response code to test custom error page. There is no reason to have this enabled other than for testing purposes.
 package = Testing
-core = 6.x
+core = 7.x
